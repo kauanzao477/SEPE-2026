@@ -184,7 +184,7 @@ export default function QuizForm({ questions, onSubmit, loading }) {
 
           <div className="input-field-wrapper">
             <label htmlFor="studentCourse" className="input-clean-label">
-              Selecione seu Curso:
+              Selecione seu Curso ou Instituição:
             </label>
             <select
               id="studentCourse"
@@ -192,15 +192,13 @@ export default function QuizForm({ questions, onSubmit, loading }) {
               value={studentCourse}
               onChange={(e) => setStudentCourse(e.target.value)}
             >
-              <option value="">-- Selecione seu curso --</option>
-              <option value="Informática">Técnico em Informática</option>
-              <option value="Agropecuária">Técnico em Agropecuária</option>
-              <option value="Eletrotécnica">Técnico em Eletrotécnica</option>
-              <option value="Meio Ambiente">Técnico em Meio Ambiente</option>
-              <option value="Administração">Técnico em Administração</option>
-              <option value="Química">Técnico em Química</option>
+              <option value="">-- Selecione seu curso ou escola --</option>
+              <option value="Técnico em Informática">Técnico em Informática</option>
+              <option value="Técnico em Agropecuária">Técnico em Agropecuária</option>
+              <option value="Técnico em Alimentos">Técnico em Alimentos</option>
               <option value="Ensino Superior">Ensino Superior / Graduação</option>
-              <option value="Outro">Outro Curso</option>
+              <option value="Outra Escola">Sou de outra escola / instituição</option>
+              <option value="Outro Curso">Outro curso</option>
             </select>
           </div>
 

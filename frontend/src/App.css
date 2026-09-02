@@ -1340,3 +1340,60 @@ body {
   padding: 1.1rem 2.25rem !important;
   font-size: 1.05rem !important;
 }
+
+/* Grid de Recomendações Práticas por Nível */
+.level-recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.15rem;
+}
+
+@media (max-width: 720px) {
+  .level-recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.recommendation-card-item {
+  background: #f8fafc;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.2s ease;
+}
+
+.recommendation-card-item:hover {
+  border-color: #bfdbfe;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.05);
+  transform: translateY(-2px);
+}
+
+.rec-icon-wrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: #eff6ff;
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rec-card-body h5 {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.rec-card-body p {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
