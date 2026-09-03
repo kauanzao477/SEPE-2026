@@ -11,7 +11,9 @@ import {
   Info,
   Check,
   Compass,
-  FileText
+  FileText,
+  Sparkles,
+  ShieldAlert
 } from 'lucide-react';
 
 export default function FinalFeedback({ resultData, onReset }) {
@@ -25,8 +27,8 @@ export default function FinalFeedback({ resultData, onReset }) {
         key: 'alto',
         title: 'Atenção aos Hábitos: Risco de Dependência Excessiva',
         statusTag: 'Nível Alto de Dependência',
-        badgeStyle: 'badge-danger-clean',
-        cardStyle: 'card-danger-clean',
+        heroTheme: 'hero-theme-rose',
+        badgeTheme: 'badge-theme-rose',
         isExceeded: true,
         summary: 'Suas respostas indicam um recurso constante a ferramentas automáticas para resolver tarefas escolares. Delegar a criação de respostas pode afetar sua capacidade de síntese, escrita e raciocínio em exames presenciais.',
         observations: [
@@ -37,21 +39,29 @@ export default function FinalFeedback({ resultData, onReset }) {
         recommendations: [
           {
             icon: Target,
+            theme: 'rec-theme-blue',
+            badgeText: 'Dica Prática 1',
             title: '1. Regra do Rascunho (15 Minutos)',
-            desc: 'Antes de consultar qualquer ferramenta, dedique ao menos 15 minutos tentando estruturar a resposta sozinho no papel.'
+            desc: 'Antes de consultar qualquer ferramenta, dedique ao menos 15 minutos tentando estruturar a resposta sozinho no caderno.'
           },
           {
             icon: BookOpen,
+            theme: 'rec-theme-purple',
+            badgeText: 'Dica Prática 2',
             title: '2. Consulta Direta a Materiais Físicos',
             desc: 'Reserve dias da semana para estudar tópicos importantes utilizando exclusivamente livros, apostilas e anotações da aula.'
           },
           {
             icon: Brain,
+            theme: 'rec-theme-amber',
+            badgeText: 'Dica Prática 3',
             title: '3. Pergunte "Como Resolver", Não a Resposta',
             desc: 'Ao usar a IA, peça orientações sobre o passo a passo da solução em vez de pedir o texto ou exercício pronto.'
           },
           {
             icon: FileText,
+            theme: 'rec-theme-emerald',
+            badgeText: 'Dica Prática 4',
             title: '4. Prática para Exames Presenciais',
             desc: 'Resolva listas de exercícios de vestibulares ou provas anteriores totalmente sem auxílio digital para avaliar seu aprendizado real.'
           }
@@ -62,8 +72,8 @@ export default function FinalFeedback({ resultData, onReset }) {
         key: 'medio',
         title: 'Uso Frequente: Bom Equilíbrio com Pontos de Atenção',
         statusTag: 'Nível Moderado',
-        badgeStyle: 'badge-warning-clean',
-        cardStyle: 'card-warning-clean',
+        heroTheme: 'hero-theme-amber',
+        badgeTheme: 'badge-theme-amber',
         isExceeded: false,
         summary: 'Você utiliza a tecnologia como apoio prático no dia a dia. Para manter esse recurso como um aliado saudável, certifique-se de que a praticidade não substitua o hábito de pesquisar e refletir por conta própria.',
         observations: [
@@ -74,21 +84,29 @@ export default function FinalFeedback({ resultData, onReset }) {
         recommendations: [
           {
             icon: Lightbulb,
+            theme: 'rec-theme-amber',
+            badgeText: 'Estratégia 1',
             title: '1. Checagem Ativa de Fontes',
             desc: 'Ao receber informações da IA, selecione pontos principais para validar em livros didáticos ou sites acadêmicos.'
           },
           {
             icon: FileText,
+            theme: 'rec-theme-blue',
+            badgeText: 'Estratégia 2',
             title: '2. Reescrita com Vocabulário Próprio',
             desc: 'Utilize a ferramenta apenas para gerar ideias e tópicos. Redija a versão final do trabalho com suas próprias palavras.'
           },
           {
             icon: Brain,
+            theme: 'rec-theme-purple',
+            badgeText: 'Estratégia 3',
             title: '3. Explique o Conteúdo em Voz Alta',
             desc: 'Tente explicar a matéria para um colega sem olhar para as telas. Explicar com clareza é o melhor sinal de aprendizado.'
           },
           {
             icon: Target,
+            theme: 'rec-theme-emerald',
+            badgeText: 'Estratégia 4',
             title: '4. Autoavaliação com Questões',
             desc: 'Solicite à IA perguntas de fixação sobre o tema estudado e responda-as de forma autônoma sem consultar o material.'
           }
@@ -99,8 +117,8 @@ export default function FinalFeedback({ resultData, onReset }) {
         key: 'baixo',
         title: 'Perfil Autônomo: Foco no Raciocínio Independente',
         statusTag: 'Nível Autônomo',
-        badgeStyle: 'badge-success-clean',
-        cardStyle: 'card-success-clean',
+        heroTheme: 'hero-theme-emerald',
+        badgeTheme: 'badge-theme-emerald',
         isExceeded: false,
         summary: 'Suas respostas demonstram alta autonomia nos estudos. Você prioriza o raciocínio próprio e recorre à tecnologia apenas para consultas pontuais ou apoio de produtividade.',
         observations: [
@@ -111,21 +129,29 @@ export default function FinalFeedback({ resultData, onReset }) {
         recommendations: [
           {
             icon: BookOpen,
+            theme: 'rec-theme-emerald',
+            badgeText: 'Ação Recomendada 1',
             title: '1. Aprofundamento de Bibliografia',
             desc: 'Utilize buscadores e ferramentas digitais para localizar artigos acadêmicos e referências mais aprofundadas.'
           },
           {
             icon: Brain,
+            theme: 'rec-theme-blue',
+            badgeText: 'Ação Recomendada 2',
             title: '2. Síntese e Mapas Conceituais',
             desc: 'Mantenha o hábito de construir mapas mentais e resumos feitos à mão para consolidar a retenção de longo prazo.'
           },
           {
             icon: Compass,
+            theme: 'rec-theme-purple',
+            badgeText: 'Ação Recomendada 3',
             title: '3. Organização do Fluxo de Estudos',
             desc: 'Aplique a tecnologia na montagem de cronogramas, cartões de revisão e gestão de tempo para os exames.'
           },
           {
             icon: GraduationCap,
+            theme: 'rec-theme-amber',
+            badgeText: 'Ação Recomendada 4',
             title: '4. Troca de Experiências com Colegas',
             desc: 'Compartilhe suas técnicas de estudo autônomo com colegas, incentivando grupos de discussão e pesquisa ativa.'
           }
@@ -137,111 +163,162 @@ export default function FinalFeedback({ resultData, onReset }) {
   const profile = getProfile(studentAverage);
 
   return (
-    <div className="feedback-container-human">
+    <div className="vibrant-feedback-wrapper">
       {/* Topo Limpo com Ação de Refazer */}
-      <div className="human-top-bar">
-        <div className="human-top-info">
-          <Info size={16} className="text-muted" />
-          <span>Relatório gerado com base no seu preenchimento.</span>
+      <div className="vibrant-top-bar">
+        <div className="vibrant-top-info">
+          <Info size={16} />
+          <span>Relatório consolidado com base no seu preenchimento.</span>
         </div>
         {onReset && (
-          <button type="button" className="btn-human-outline" onClick={onReset}>
+          <button type="button" className="btn-redo-vibrant" onClick={onReset}>
             <RotateCcw size={14} /> Refazer Pesquisa
           </button>
         )}
       </div>
 
-      {/* Aviso Claro se Ultrapassou o Limite */}
+      {/* Alerta Destacado se Ultrapassou o Limite */}
       {profile.isExceeded && (
-        <div className="human-alert-box">
-          <div className="human-alert-icon">⚠️</div>
-          <div>
-            <strong>Atenção ao Nível de Dependência ({studentAverage} / 5.0)</strong>
-            <p>Seu resultado indica uso elevado de soluções automáticas. É recomendado adotar estratégias de estudo autônomo para garantir boa retenção de conteúdo.</p>
+        <div className="vibrant-alert-banner">
+          <div className="vibrant-alert-icon">
+            <ShieldAlert size={28} />
+          </div>
+          <div className="vibrant-alert-content">
+            <h4>Atenção ao Nível de Dependência ({studentAverage} / 5.0)</h4>
+            <p>Seu resultado indica uso elevado de soluções automáticas. Adote as estratégias recomendadas abaixo para fortalecer seu aprendizado autônomo.</p>
           </div>
         </div>
       )}
 
-      {/* Card Principal do Perfil de Estudo */}
-      <div className={`human-profile-card ${profile.cardStyle}`}>
-        <div className="human-card-header">
+      {/* CARD HERO COLORIDO E IMPACTANTE DO PERFIL */}
+      <div className={`vibrant-hero-card ${profile.heroTheme}`}>
+        <div className="vibrant-hero-header">
+          <div className="vibrant-hero-info">
+            <div className="vibrant-badge-row">
+              <span className={`vibrant-badge-pill ${profile.badgeTheme}`}>
+                {profile.statusTag}
+              </span>
+              <span className="vibrant-student-name">
+                Participante: <strong>{studentName}</strong>
+              </span>
+            </div>
+
+            <h3 className="vibrant-hero-title">{profile.title}</h3>
+            <p className="vibrant-hero-desc">{profile.summary}</p>
+          </div>
+
+          <div className="vibrant-score-box">
+            <span className="vibrant-score-lbl">MÉDIA GERAL</span>
+            <div className="vibrant-score-num">
+              {studentAverage} <span className="vibrant-score-denom">/ 5.0</span>
+            </div>
+            <div className="vibrant-score-bar-track">
+              <div className="vibrant-score-bar-fill" style={{ width: `${(studentAverage / 5) * 100}%` }} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* HÁBITOS DE ESTUDO */}
+      <div className="vibrant-section-card">
+        <div className="vibrant-section-header">
+          <div className="vibrant-header-badge blue-badge">
+            <CheckCircle2 size={20} />
+          </div>
           <div>
-            <span className={`human-badge ${profile.badgeStyle}`}>{profile.statusTag}</span>
-            <h3 className="human-card-title">{profile.title}</h3>
-          </div>
-          <div className="human-score-box">
-            <span className="human-score-label">Média</span>
-            <span className="human-score-value">{studentAverage}</span>
-            <span className="human-score-max">/ 5.0</span>
+            <h4 className="vibrant-section-title">Análise de Hábitos Acadêmicos</h4>
+            <p className="vibrant-section-sub">Observações sobre o seu perfil de estudo:</p>
           </div>
         </div>
-        <p className="human-card-desc">{profile.summary}</p>
-      </div>
 
-      {/* Seção de Observações sobre Hábitos */}
-      <div className="human-section-box">
-        <h4 className="human-section-title">Análise de Hábitos Acadêmicos</h4>
-        <ul className="human-obs-list">
+        <div className="vibrant-obs-grid">
           {profile.observations.map((obs, idx) => (
-            <li key={idx} className="human-obs-item">
-              <Check size={16} className="obs-check-icon" />
+            <div key={idx} className="vibrant-obs-item">
+              <div className="vibrant-obs-icon">
+                <Check size={15} />
+              </div>
               <span>{obs}</span>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
 
-      {/* Seção de Recomendações Práticas de Estudo */}
-      <div className="human-section-box">
-        <div className="human-section-header">
-          <h4 className="human-section-title">Recomendações Práticas para seus Estudos</h4>
-          <p className="human-section-sub">Ações simples para fortalecer sua autonomia e rendimento:</p>
+      {/* PLANO DE RECOMENDAÇÕES PRÁTICAS COLORIDO */}
+      <div className="vibrant-section-card">
+        <div className="vibrant-section-header">
+          <div className="vibrant-header-badge purple-badge">
+            <Sparkles size={20} />
+          </div>
+          <div>
+            <h4 className="vibrant-section-title">Recomendações Práticas para seus Estudos</h4>
+            <p className="vibrant-section-sub">Estratégias recomendadas para potencializar seus resultados:</p>
+          </div>
         </div>
 
-        <div className="human-recs-grid">
+        <div className="vibrant-recs-grid">
           {profile.recommendations.map((rec, idx) => {
             const IconComponent = rec.icon;
             return (
-              <div key={idx} className="human-rec-card">
-                <div className="human-rec-header">
-                  <div className="human-rec-icon">
-                    <IconComponent size={18} />
+              <div key={idx} className={`vibrant-rec-card ${rec.theme}`}>
+                <div className="vibrant-rec-top">
+                  <div className="vibrant-rec-icon-box">
+                    <IconComponent size={20} />
                   </div>
-                  <h5>{rec.title}</h5>
+                  <span className="vibrant-rec-tag">{rec.badgeText}</span>
                 </div>
-                <p>{rec.desc}</p>
+                <div className="vibrant-rec-body">
+                  <h5>{rec.title}</h5>
+                  <p>{rec.desc}</p>
+                </div>
               </div>
             );
           })}
         </div>
       </div>
 
-      {/* Seção Sobre a Trajetória Acadêmica */}
-      <div className="human-section-box">
-        <h4 className="human-section-title">Por que a Autonomia é Importante?</h4>
-        <div className="human-steps-row">
-          <div className="human-step-item">
-            <GraduationCap size={20} className="step-icon-subtle" />
-            <h6>Na Vida Escolar</h6>
-            <p>Desenvolve raciocínio lógico duradouro e capacidade real de interpretação.</p>
+      {/* SEÇÃO DA TRAJETÓRIA ACADÊMICA */}
+      <div className="vibrant-section-card">
+        <div className="vibrant-section-header">
+          <div className="vibrant-header-badge amber-badge">
+            <Brain size={20} />
           </div>
-          <div className="human-step-item">
-            <Target size={20} className="step-icon-subtle" />
-            <h6>Em Exames e ENEM</h6>
-            <p>Garante segurança em provas presenciais sem auxílio de consultas digitais.</p>
+          <div>
+            <h4 className="vibrant-section-title">O Impacto da Autonomia na Sua Trajetória</h4>
+            <p className="vibrant-section-sub">Por que desenvolver o raciocínio independente faz diferença:</p>
           </div>
-          <div className="human-step-item">
-            <Briefcase size={20} className="step-icon-subtle" />
+        </div>
+
+        <div className="vibrant-steps-grid">
+          <div className="vibrant-step-card step-blue">
+            <div className="vibrant-step-icon">
+              <GraduationCap size={22} />
+            </div>
+            <h6>Na Sala de Aula</h6>
+            <p>Desenvolve capacidade crítica e compreensão profunda das disciplinas.</p>
+          </div>
+
+          <div className="vibrant-step-card step-amber">
+            <div className="vibrant-step-icon">
+              <Target size={22} />
+            </div>
+            <h6>Em Exames & ENEM</h6>
+            <p>Garante segurança e agilidade em provas presenciais sem apoio de telas.</p>
+          </div>
+
+          <div className="vibrant-step-card step-emerald">
+            <div className="vibrant-step-icon">
+              <Briefcase size={22} />
+            </div>
             <h6>No Mercado Futuro</h6>
-            <p>Fortalece o pensamento crítico, a tomada de decisão e a resolução de problemas.</p>
+            <p>Fortalece o poder de decisão, liderança e resolução de desafios complexos.</p>
           </div>
         </div>
       </div>
 
-      {/* Ação de Refazer no Rodapé */}
+      {/* Botão de Refazer */}
       {onReset && (
-        <div className="human-bottom-action">
-          <button type="button" className="btn-primary-glow" onClick={onReset}>
+        <div className="vibrant-bottom-action">
+          <button type="button" className="btn-primary-glow btn-redo-large" onClick={onReset}>
             <RotateCcw size={16} /> Refazer a Pesquisa
           </button>
         </div>
