@@ -277,7 +277,6 @@ export default function App() {
       <footer className="site-footer">
         <div className="footer-content">
           <span>Pesquisa Acadêmica sobre Inteligência Artificial e Aprendizado</span>
-          <span className="footer-sub">Limite: 1 resposta por participante</span>
         </div>
       </footer>
     </div>
